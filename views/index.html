@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href = "../public/css/style.css" rel="stylesheet"/>
+    <script src = "./js/gametickets.js"></script>
+
+    <title>GAA Tickets</title>
+
+</head>
+<body>
+    <div class="container-1">
+        <h1>Welcome to The GAA</h1>
+        <img src="/images/gaa-logo.png" alt="GAA" width="400" height="200">
+    </div>
+    <br>
+
+    <h3>Admin Ticket managment</h3>
+
+    <div class="form">
+        <button id="btnAdd" onclick="add_new_gameticket()"><strong>Add</strong> New Game Ticket</button>
+        <button id ="btnEdit" onclick="edit_gameticket()"><strong>Edit</strong> Current Game Ticket</button>
+        <button id ="btnDelete" onclick="delete_gameticket()"><strong>Delete</strong> Current Game Ticket</button><br><br>
+
+        <label for="label">Game Ticket:</label><br>
+        <input type="text" id="gameticket" name="gameticket" value="Game Ticket"><br>
+        <label for="label">More Info:</label><br>
+        <input type="text" id="moreinfo" name="moreinfo" value="More Info"><br><br>         
+
+
+        <input type="submit" value="Submit">
+
+    </div> 
+
+    <p>Please click SUBMIT when done.</p>
+
+</body>
+    
+</body>
+</html>
+
+
+<!-- https://www.w3schools.com/howto/howto_css_contact_form.asp -->
