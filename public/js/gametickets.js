@@ -1,7 +1,6 @@
 let gameIds=[];
-
 //Heroku app access collection gametickets
-let apiURL = "https://iwa-ca2kelly.herokuapp.com/gametickets"
+let apiURL = "https://iwa-ca2kj.herokuapp.com/gametickets"
 
 //variable to the selected game
 let gameSelected='';
@@ -60,7 +59,7 @@ function delete_gameticket(){
             .catch(err => console.log(err));
             
             
-            document.getElementById("artists"+gameSelected).remove();
+            document.getElementById("name"+gameSelected).remove();
             
             gameIds.splice(gameIds.indexOf(gameSelected));
             $("#my-retrieve").empty();
