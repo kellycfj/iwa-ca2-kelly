@@ -1,6 +1,25 @@
 let gameIds=[];
+
+//Heroku app access collection gametickets
 let apiURL = "https://testkell.herokuapp.com/gametickets"
+
+//variable to the selected game
 let gameSelected='';
+
+//form to diplay field to the user if click ADD game
+function add_new_gameticket(){
+    $("#mygame").empty();
+    let strHtml = 
+    "<form class = 'formgame' > " +
+    "<label gamelabel='gamel'>Game Ticket: </label>" +
+    "<input gameinput='gametext' id='gameticket_type'><br>" +
+    "<label moreinfolabel='moreinfol'>More Info: </label>" +
+    "<input moreinfoinput='moreinfotext' id = 'moreinfo_type'><br></br>" +
+    "<input id='gametickets_id' type='hidden' value=''/>"+
+    "<button type='button1' class='btn1' onclick ='submitGaelicgame()'>Add a game</button>"+
+    "</form>"
+    $("#mygame").append(strHtml);
+}
 
 // retrieve my games
 function retrieveGames(gameId){
