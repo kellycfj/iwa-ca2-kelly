@@ -8,15 +8,7 @@ let gameSelected='';
 //form to diplay field to the user if click ADD game
 function add_new_gameticket(){
     $("#mygame").empty();
-    let strHtml = 
-    "<form class = 'formgame' > " +
-    "<label gamelabel='gamel'>Game Ticket: </label>" +
-    "<input gameinput='gametext' id='gameticket_type'><br>" +
-    "<label moreinfolabel='moreinfol'>More Info: </label>" +
-    "<input moreinfoinput='moreinfotext' id = 'moreinfo_type'><br></br>" +
-    "<input id='gametickets_id' type='hidden' value=''/>"+
-    "<button type='button1' class='btn1' onclick ='submitGaelicgame()'>Add a game</button>"+
-    "</form>"
+    let isExecuted = confirm("Are you sure to execute this action?");
     $("#mygame").append(strHtml);
 }
 
@@ -43,6 +35,11 @@ function retrieveGames(gameId){
 
 };
 
+$(document).ready(function(){
+    getGames();
+});
+
+
 //delete my game
 function delete_gameticket(){
 
@@ -59,7 +56,7 @@ function delete_gameticket(){
             .catch(err => console.log(err));
             
             
-            document.getElementById("name"+gameSelected).remove();
+            document.getElementById("nameOf"+gameSelected).remove();
             
             gameIds.splice(gameIds.indexOf(gameSelected));
             $("#my-retrieve").empty();
@@ -88,7 +85,7 @@ function getGames(){
             var id = data[i]._id;
             if(!gameIds.includes(id)){
             document.getElementById("my-retrieve").innerHTML +=
-            "<li id='name"+id+"' onclick= \"showGames('"+id+"')\">" + data[i].gaelicgame+"</li>"
+            "<li id='nameOf"+id+"' onclick= \"showGames('"+id+"')\">" + data[i].gaelicgame+"</li>"
             gameIds.push(id);
             }
          
