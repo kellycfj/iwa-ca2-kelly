@@ -1,5 +1,5 @@
 let gameIds=[];
-let apiURL = "https://iwa-ca2k.herokuapp.com/gameticket"
+let apiURL = "https://iwa-ca2t.herokuapp.com/gametickets"
 let gameSelected='';
 
 // retrieve my games
@@ -15,7 +15,7 @@ function retrieveGames(gameId){
     
         let strHtml = "<h1>"+game.gaelicgame+"</h1>"
 
-        strHtml+="<h2>Location: </h2>"+
+        strHtml+="<h2>More info: </h2>"+
             "<h2>"+ game.moreinfos.replace(/\\n/g, "<br />"); +"</h2>"
         $("#mygame").append(strHtml);
 
@@ -58,3 +58,4 @@ function showGames(gameId){
     showConcert(gameId);
     gameSelected = gameId;
 };
+
