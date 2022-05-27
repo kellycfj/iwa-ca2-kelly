@@ -1,5 +1,5 @@
 let gameIds=[];
-let apiURL = "https://iwa-ca2t.herokuapp.com/gametickets"
+let apiURL = "https://testkell.herokuapp.com/gametickets"
 let gameSelected='';
 
 // retrieve my games
