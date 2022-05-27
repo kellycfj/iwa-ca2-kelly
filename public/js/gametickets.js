@@ -1,7 +1,7 @@
 let gameIds=[];
 
 //Heroku app access collection gametickets
-let apiURL = "https://testkell.herokuapp.com/gametickets"
+let apiURL = "https://iwa-ca2kelly.herokuapp.com/gametickets"
 
 //variable to the selected game
 let gameSelected='';
