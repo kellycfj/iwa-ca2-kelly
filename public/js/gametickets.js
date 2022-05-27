@@ -36,7 +36,7 @@ function retrieveGames(gameId){
 
         strHtml+="<h2>More info: </h2>"+
             "<h2>"+ game.moreinfos.replace(/\\n/g, "<br />"); +"</h2>"
-        $("#mygame").append(strHtml);
+        $("#my-retrieve").append(strHtml);
 
     }).catch(function (err){
         console.log(err);
@@ -63,7 +63,7 @@ function delete_gameticket(){
             document.getElementById("artists"+gameSelected).remove();
             
             gameIds.splice(gameIds.indexOf(gameSelected));
-            $("#mygame").empty();
+            $("#my-retrieve").empty();
             gameSelected ='';
             }
     
@@ -73,7 +73,7 @@ function delete_gameticket(){
 
 //show games  
 function showGames(gameId){
-    $("#mygame").empty();
+    $("#my-retrieve").empty();
     retrieveGames(gameId);
     gameSelected = gameId;
 };
@@ -88,7 +88,7 @@ function getGames(){
         for (var i = 0; i< data.length ; i++ ){
             var id = data[i]._id;
             if(!gameIds.includes(id)){
-            document.getElementById("mygames").innerHTML +=
+            document.getElementById("my-retrieve").innerHTML +=
             "<li id='name"+id+"' onclick= \"showGames('"+id+"')\">" + data[i].gaelicgame+"</li>"
             gameIds.push(id);
             }
