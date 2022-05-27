@@ -82,3 +82,7 @@ function getGames(){
 
 };
 
+
+$(document).ready(function(){
+    getGames();
+});
