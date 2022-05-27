@@ -55,7 +55,7 @@ function delete_gameticket(){
 //show games  
 function showGames(gameId){
     $("#mygame").empty();
-    showConcert(gameId);
+    retrieveGames(gameId);
     gameSelected = gameId;
 };
 
