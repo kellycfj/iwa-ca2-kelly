@@ -59,3 +59,26 @@ function showGames(gameId){
     gameSelected = gameId;
 };
 
+function getGames(){
+    
+    fetch(apiURL)
+    .then(function (response){
+        return response.json();
+    })
+    .then(function(data){
+        for (var i = 0; i< data.length ; i++ ){
+            var id = data[i]._id;
+            if(!gameIds.includes(id)){
+            document.getElementById("mygames").innerHTML +=
+            "<li id='name"+id+"' onclick= \"showGames('"+id+"')\">" + data[i].gaelicgame+"</li>"
+            gameIds.push(id);
+            }
+         
+        }
+    }).catch(function (err){
+        console.log(err);
+    }); 
+    console.log(recipeIds);
+
+};
+
