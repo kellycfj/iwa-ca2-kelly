@@ -78,7 +78,7 @@ function getGames(){
     }).catch(function (err){
         console.log(err);
     }); 
-    console.log(recipeIds);
+    console.log(gameIds);
 
 };
 
